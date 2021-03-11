@@ -1,0 +1,85 @@
+ <div class="container mx-auto border border-2 ">
+ 
+      <h4 class=" text-primary bg-dark w-25 text-center"> VOS PUBLICATIONS </h4>
+</div>
+
+
+<div class="container d-flex  flex-wrap ">
+
+     
+
+
+
+   
+
+{{#each ideas}}
+
+<!--
+
+     <div class="container" style="max-width:500px; margin: 0 auto;">
+          <div class="card card-body mb-2">
+
+               <h4>TITRE DE L'ARTICLE</br>{{title}}</h4>
+               <h4>CONTENU DE L'ARTICLE<br>{{details}}</h4>
+               <a href="/ideas/edit/{{id}}" class="btn btn-dark btn-block mb-2" >Edit</a>
+               <form method="POST" action="/ideas/{{id}}?_method=DELETE">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <input type="submit" class="btn btn-danger btn-block" value="Delete">
+                     <a type="button" class="btn btn-danger" href="/index">Annuler</a>
+               </form>
+          </div>
+     </div>
+
+   
+
+<div class="card w-25" style="width: 400px;">
+   <img class="card-img-top" src="images/imagesAtari/3.jpg" alt="Card image cap">
+          <div class="card-body"> 
+                    <h5 class="card-title">  <h4>TITRE DE L'ARTICLE</br>{{title}}</h4></h5>
+                    <p class="card-text">  <h4>CONTENU DE L'ARTICLE<br>{{details}}</h4> </p>
+                    <a href="/ideas/edit/{{id}}" class="btn btn-dark btn-block mb-2" >Edit</a>
+               <form method="POST" action="/ideas/{{id}}?_method=DELETE">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <input type="submit" class="btn btn-danger btn-block" value="Delete">
+                     <a type="button" class="btn btn-danger btn-block" href="/index">Annuler</a>
+               </form>
+          </div>
+</div>
+
+-->
+
+<div class="card mr-3 text-center bg-info mt-3" style=" height:300px; width:260px; margin-bottom:20px" >
+     
+      <div class="card-body bg-dark text-light "> 
+
+                    <div>
+                               <h6></br>{{title}}</h6> 
+                           <h6>{{details}}</h6> 
+                              <a href="#" style=" text-color:#fd5700;">LIRE L'ARTICLE COMPLET</a>
+
+                    </div>
+                              <img class="card-img-top" src="/images/imagesAtari/atari3.jpg" alt="Jeux Atari space invader">
+
+    
+    
+                    {{!-- <h6 class="card-subtitle mb-2 text-muted"></h6> --}}
+  
+                   
+
+               <form method="POST" action="/ideas/{{id}}?_method=DELETE">
+                <a href="/ideas/edit/{{id}}" class="btn btn-secondary  btn-sm " >Editez</a>
+                    <input type="hidden" name="_method" value="DELETE">
+                    <input type="submit" class="btn btn-danger btn-sm" value="supprimez">
+                    <a type="button" class="btn btn-secondary btn-sm" href="/">Annuler</a>
+               </form>
+          </div>
+     </div>
+
+
+
+               {{else}}
+
+                    <p>Aucun articles publiés </p>
+
+               {{/each}}
+</div>

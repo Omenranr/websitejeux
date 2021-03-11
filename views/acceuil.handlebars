@@ -1,0 +1,71 @@
+
+<!--
+    
+<style>
+body {background-image :url('images/imageFondEcran/montagneSonic.jpg'); background-size:cover; margin:auto; max-width:1900px;}
+</style>
+
+-->
+<!--
+<h1>
+
+
+TEST INDEX HANDLEBARS
+
+</h1>
+-->
+
+
+
+     
+<link rel="stylesheet" href="/path/to/bootstrap.min.css">
+
+
+<div class="container" style=" text-align: center">
+<h1> L'ACTU DU RETRO GAMING EN CONTINUE </h1>
+</div>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  </head>
+  <body>
+    <div class="container">
+      <h1></h1>
+      <div id="demo" class="carousel slide carousel-fade" data-ride="carousel">
+        <!-- Indicateurs -->
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+        <!-- Carrousel -->
+        {{> _news this}}
+        <!-- Contrôles -->
+        <a class="carousel-control-prev" href="#demo" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Précédent</span>
+        </a>
+        <a class="carousel-control-next" href="#demo" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Suivant</span>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

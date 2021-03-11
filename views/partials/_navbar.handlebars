@@ -1,0 +1,107 @@
+
+
+<div class="container">
+    <div class="row">
+    <nav class="navbar navbar-expand-sm  navbar-light barNavig mt-1" style=" color: black">
+        
+            <button class="navbar-toggler" type="button" data-toggle="collapse" datatarget="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-white bg-info" href="/">Acceuil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white bg-info" href="/histoireDesJeuxVideo">Histoire des jeux video </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-white bg-danger " href="/explosionDuRetroGaming">Explosion du retro-gaming</a>
+                    </li>
+
+                <li class="nav-item">
+                        <a class="nav-link text-white bg-info " href="/thumbnails">Voir tous les articles</a>
+                    </li>
+
+                <li class="nav-item">
+                        <a class="nav-link text-white bg-info " href="/about">Forum de discution</a>
+                    </li>
+
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    {{#if user}}
+                       <li class="nav-item">
+                           <a href="/users/logout" class="nav-link text-white bg-info">Se déconnecter</a>
+                       </li>
+                       <li class="nav-item dropdown">
+                        <a href="" class="nav-link dropdown-toggle text-white bg-info " data-toggle="dropdown" 
+                            id="navbarDropdownMenuLink">  Vos articles de jeux rétro</a>
+                        <div class="dropdown-menu">
+                            <a href="/ideas" class="dropdown-item text-white bg-info">Articles déja publiés</a>
+                            <a href="/ideas/add" class="dropdown-item text-white bg-info">Ajouter des articles</a>
+                        </div>
+                      </li>
+
+                    {{else}}
+                        <li class="nav-item">
+                           <a href="/users/login" class="nav-link text-white bg-danger">Proposer votre jeux rétro</a>
+                       </li>
+                       <li class="nav-item">
+                         <a href="/users/register" class="nav-link text-white bg-warning">S'enregister</a>
+                       </li>
+                    {{/if}}
+                    
+
+                </ul>
+            </div>
+        
+    </nav>
+   </div>
+</div>
+
+
+                  <!-- FIN NAVBAR MANU -->
+                  
+                      <!-- debut MENU ICONES CONSOLES RETRO -->
+
+                <div class="container " >          
+                    <div class="row ">
+                      <nav class="col navbar navbar-expand-lg navbar-light text-dark ">  
+                                          	                       
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div id="navbarContent" class="collapse navbar-collapse">
+                                <ul class="navbar-nav ">
+                                  <li class="nav-item  text-center  ml-5 mr-4 ">
+                                    <a class=" nav-link " href="carrousel_principal"><img class="imageConsole trans" src="/images/imagesAtari/atariVCS2600.jpeg" alt="site logo" /></br>Jeux ATARI VCS</a>
+                                    </li>
+                                    <li class="nav-item text-center mr-4" >  
+                                    <a class=" nav-link " href="carrousel_principal"><img class="imageConsole trans" src="/images/imagesNes/nes.jpg" alt="site logo" /></br>Jeux NES</a>
+                                  </li>
+                                  <li class="nav-item text-center mr-3 ">
+                                  <a class="nav-link " href="carrousel_principal"><img class="imageConsole trans"  src="/images/imagesSuperNintendo/superNintendo.jpg" alt="site logo" /></br> Jeux Super </br>Nintendo</a>
+                                  </li>
+                                  <li class="nav-item text-center mr-4">
+                                  <a class="nav-link " href="carrousel_principal"><img class="imageConsole trans" src="/images/imagesMasterSystem/masterSystem.jpg" alt="site logo" /></br>Jeux</br>Master Système</a>
+                                    </li>
+                                    <li class="nav-item text-center mr-4 ">
+                                      <a class="nav-link " href="carrousel_principal"><img class="imageConsole trans" src="/images/imagesMegadrive/megadrive.jpg" alt="site logo" /></br>Jeux</br>Megadrive</a>
+                                    </li>
+                                    <li class="nav-item text-center mr-4 ">
+                                      <a class="nav-link " href="carrousel_principal"><img class="imageConsole trans" src="/images/imagesPcEngine/pcEngine.jpg" alt="site logo" /></br>Jeux</br>PC Engine </a>
+                                    </li>
+                                    <li class="nav-item text-center">
+                                      <a class="nav-link " href="/carrousel_principal"><img class="imageConsole trans" src="/images/imagesNeoGeo/neoGeo.jpg" alt="site logo" /></br>Jeux</br>Neo-Geo</a>
+                                    </li> 
+                                </ul> 
+                            </div>                      
+                       </nav>
+                    </div>
+                  </div>                     
+              
+       <!-- FIN barres de navigation site manu initial -->
+
+    

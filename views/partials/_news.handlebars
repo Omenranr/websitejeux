@@ -1,0 +1,127 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<!--Container-->
+{{#each this}}
+{{/each}}
+<div class="container">
+    <div class="row mb-2">
+        <div class="col-12 text-center pt-3">
+        </div>
+    </div>
+    <!--Start code-->
+    <div class="row">
+        <div class="col-12 pb-5">
+            <!--SECTION START-->
+            <section class="row">
+                <!--Start slider news-->
+                <div class="col-12 col-md-6 pb-0 pb-md-3 pt-2 pr-md-1">
+                    <div id="featured" class="carousel slide carousel" data-ride="carousel">
+                        <!--dots navigate-->
+                        <ol class="carousel-indicators top-indicator" style="height: 20px;">
+                            <li data-target="#featured" data-slide-to="0" class="active"></li>
+                            <li data-target="#featured" data-slide-to="1"></li>
+                            <li data-target="#featured" data-slide-to="2"></li>
+                            <li data-target="#featured" data-slide-to="3"></li>
+                        </ol>
+                        
+                        <!--carousel inner-->
+                        <div class="carousel-inner">
+                            <!--Item slider-->
+                            <!--Item slider-->
+                            {{#each this.topNews}}
+                                {{#if this.first}}
+                                <div class="carousel-item active">
+                                {{else}}
+                                <div class="carousel-item">
+                                {{/if}}
+                                    <div class="card border-0 rounded-0 text-light overflow zoom">
+                                        <div class="position-relative">
+                                            <!--thumbnail img-->
+                                            <div class="ratio_left-cover-1 image-wrapper">
+                                                <a href={{this.url}} target="_blank">
+                                                    <img class="img-fluid w-100"
+                                                        src={{this.urlToImage}}
+                                                        alt="Bootstrap news template" style="height:455px">
+                                                </a>
+                                            </div>
+                                            <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
+                                                <!--title-->
+                                                <a href={{this.url}} target="_blank">
+                                                    <h2 class="h3 post-title text-white my-1">{{this.title}}</h2>
+                                                </a>
+                                                <!-- meta title -->
+                                                <div class="news-meta">
+                                                    <span class="news-author">by {{this.author}}</span>
+                                                    <span class="news-date">{{this.publishedAt}}</span>
+                                                    <span class="news-author">- Source - {{this.source.name}}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {{/each}}
+                            <!--end item slider-->
+                        </div>
+                        <!--end carousel inner-->
+                        </div>
+                    
+                    <!--navigation-->
+                    <a class="carousel-control-prev" href="#featured" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#featured" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <!--End slider news-->
+                
+                <!--Start box news-->
+                <div class="col-12 col-md-6 pt-2 pl-md-1 mb-3 mb-lg-4">
+                    <div class="row">
+                        <!--news box-->
+                        {{#each this.minorNews}}
+                        <div class="col-6 pb-1 pt-0 pr-1">
+                            <div class="card border-0 rounded-0 text-white overflow zoom">
+                                <div class="position-relative">
+                                    <!--thumbnail img-->
+                                    <div class="ratio_right-cover-2 image-wrapper">
+                                        <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
+                                            <img class="img-fluid"
+                                                 src={{this.urlToImage}}
+                                                 alt="simple blog template bootstrap" style="height: 200px;width: 200px">
+                                        </a>
+                                    </div>
+                                    <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
+                                        <!-- category -->
+                                        <a class="p-1 badge badge-primary rounded-0" href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">Jeux videos</a>
+
+                                        <!--title-->
+                                        <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
+                                            <h6 class="text-white my-1">{{this.title}}</h6>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {{/each}}
+                        <!--end news box-->
+                    </div>
+                </div>
+                <!--End box news-->
+            </section>
+            <!--END SECTION-->
+        </div>
+    </div>
+    <!--end code-->
+    
+    <div class="row mb-4">
+        <div class="col-12 text-center">
+            <p>Design by Emmanuel <a target="_blank" href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">Bootstrap.News</a> | images by pixabay and pexels</p>
+        </div>
+    </div>
+</div>

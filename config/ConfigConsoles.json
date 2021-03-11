@@ -1,0 +1,44 @@
+{
+    "atari": {
+        "images":[
+
+        ],
+        "titre": ""
+    },
+    "nes":{
+        "images":[
+
+        ],
+        "titre": ""
+    },
+    "superNintendo":{
+        "images":[
+
+        ],
+        "titre": ""
+    },
+    "mastersystem":{
+        "images":[
+
+        ],
+        "titre": ""
+    },
+    "megadrive":{
+        "images":[
+
+        ],
+        "titre": ""
+    },
+    "pcEngine" :{
+        "images":[
+
+        ],
+        "titre": ""
+    },
+    "neoGeo" : {
+        "images":[
+
+        ],
+        "titre": ""
+    }
+}

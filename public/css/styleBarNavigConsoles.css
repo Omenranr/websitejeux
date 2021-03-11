@@ -1,0 +1,29 @@
+   
+
+
+
+  
+.imageConsole
+ { width:100px; height:100px; border-radius:15%; border:2px solid black; } 
+ul,li {border-radius: 20px;}
+.barNavig a {margin-right: 13px; border-radius:15px; }
+
+  
+.imageMenuItem
+ { padding:10px; border-radius:20%; border:2px solid black; } 
+ul,li {border-radius: 20px;}
+
+
+.trans:hover {
+    font-size: 3rem;
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 400ms;  
+    transform: scale(1.7); 
+     }
+.containerEditIdeas{ max-width:400px;}
+
+body {background-image :url('/images/imageFondEcran/montagneSonic.jpg'); background-size:cover; margin:auto; max-width:1900px;}
+
+
+
