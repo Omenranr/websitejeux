@@ -109,37 +109,39 @@ app.get('/', (req, res) => {
 // });
 
 //carrousel Principale route
-app.get('/carrousel_principal', (req, res, next)=> {
-          console.log(req.param.nom_console);
-        res.render('carrousel_principal', {layout:false});
-      });
+app.get('/carrousel_principal', (req, res, next) => {
+    
+    let console = req.query.console
+    res.render('carrousel_principal', {layout:false, console: console.toUpperCase()})
+})
 
 //carrousel Secondaire route
-app.get('/carrousel_secondaire', (req, res ) => {
+app.get('/carrousel_secondaire', (req, res) => {
     let images
-    console.log(req.query.type)
-    switch(req.query.type) {
+    let type = req.query.type
+    let console = req.query.console
+    switch(type) {
         case "adventure":
-            images =  ["atari1.jpg", "atari2.jpg", "atari3.jpg", "atari4.jpg", "atari5.jpg"]
+            images =  ["atari1", "atari2", "atari3", "atari4", "atari5"]
             break
         case "combat":
-            images = ["11.jpg", "12.jpg", "13.jpg", "14.jpg", "15.jpg"]
+            images = ["11", "12", "13", "14", "15"]
             break
         case "sport":
-            images = ["sport1.jpg", "sport2.jpg", "sport3.jpg", "sport4.jpg", "sport5.jpg"]
+            images = ["sport1", "sport2", "sport3", "sport4", "sport5"]
             break
         case "reflexion":
-            images = ["reflexion1.jpg", "reflexion2.jpg", "reflexion3.jpg", "reflexion4.jpg", "reflexion5.jpg"]
+            images = ["reflexion1", "reflexion2", "reflexion3", "reflexion4", "reflexion5"]
             break
         default:
-            images = ["reflexion1.jpg", "reflexion2.jpg", "reflexion3.jpg", "reflexion4.jpg", "reflexion5.jpg"]
+            images = ["reflexion1", "reflexion2", "reflexion3", "reflexion4", "reflexion5"]
     }
     
-    res.render('carrousel_secondaire', {layout: false, tableauSecondaire: images})   
+    res.render('carrousel_secondaire', {layout: false, tableauSecondaire: images, console})   
 });
 
 //Histoire des jeux vidéos route
-app.get('/histoireDesJeuxVideo', (req, res)=> {
+app.get('/histoireDesJeuxVideo', (req, res) => {
     res.render('histoireDesJeuxVideo');
 });
 

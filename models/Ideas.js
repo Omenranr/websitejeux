@@ -11,15 +11,21 @@ const IdeaSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    user:{
+    user: {
         type: String,
         required: true
-        
     },
     date:{
         type: Date,
         default: Date.now
+    },
+    visibility: {
+        type: String,
+        default: 'pending',
     }
 });
+
+// les articles acceptés, 
+// article.user.id = user.id
 
 mongoose.model('ideas', IdeaSchema);
