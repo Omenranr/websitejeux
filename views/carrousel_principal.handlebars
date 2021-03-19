@@ -10,7 +10,7 @@
 </head>
 <body>
  
-    <h1 style="color:rgb(64, 224, 85);margin-left:40px; margin-top:10px; position:absolute;"> VIDEO JEUX ATARI vcs 2600 <i class="far fa-caret-square-right"></i><i class="fas fa-video"></i> </h1>
+    <h1 style="color:rgb(64, 224, 85);margin-left:40px; margin-top:10px; position:absolute;"> VIDEO JEUX {{this.console}} <i class="far fa-caret-square-right"></i><i class="fas fa-video"></i> </h1>
     <div id="app" data-page="0" class="tailleCarrousel">
         <div class="sliders ">
             <div class="slide-left">
@@ -23,47 +23,37 @@
         <div class="row">
             <div class="image">
                 <h1 style="color:rgb(238, 255, 0)">JEUX DE PLATEFORME </h1>
-                <div class="box" onclick="document.location='/carrousel_secondaire?type=platform'">
-                    <img src="images/imagesAtari/atari1.jpg" >
+                <div class="box" onclick="document.location='/carrousel_secondaire?type=platform&console={{this.console}}'">
+                    <img src="images/imagesAtari/atari1.jpg">
                     
                 </div>
                 
             </div>
             <div class="image">
                 <h1 style="color:yellow;">JEUX DE COMBAT <i class="far fa-caret-square-right"></i> </h1>
-                <div class="box" onclick="document.location='/carrousel_secondaire?type=combat' ">
+                <div class="box" onclick="document.location='/carrousel_secondaire?type=combat&console={{this.console}}'">
                     
                     <a href ="/"><img src="images/imagesAtari/atari2.jpg"></a>
                 </div>
             </div>
             <div class="image">
                 <h1 style="color:yellow;">JEUX D'AVENTURE </h1>
-                <div class="box" onclick="document.location='/carrousel_secondaire?type=adventure' ">
+                <div class="box" onclick="document.location='/carrousel_secondaire?type=adventure&console={{this.console}}' ">
                     <img src="images/imagesAtari/atari3.jpg" >
                 </div>
             </div>
             <div class="image">
                 <h1 style="color:yellow;">JEUX DE SPORT </h1>
-                <div class="box" onclick="document.location='/carrousel_secondaire?type=sport' ">
+                <div class="box" onclick="document.location='/carrousel_secondaire?type=sport&console={{this.console}}' ">
                     <img src="images/imagesAtari/atari4.jpg" >
                 </div>
             </div>
             <div class="image">
                 <h1 style="color:yellow;">JEUX DE REFLEXION</h1>
-                <div class="box" onclick="document.location='/carrousel_secondaire?type=reflexion' ">
+                <div class="box" onclick="document.location='/carrousel_secondaire?type=reflexion&console={{this.console}}' ">
                     <img src="images/imagesAtari/atari5.jpg" >
                 </div>
-            </div>
-            <div class="image">
-                <div class="box" onclick="document.location='/carrousel_secondaire' ">
-                    <img src="images/imagesAtari/atari6.jpg" >
-                </div>
-            
-            
-           
-        </div >
-        
-        
+            </div>        
     </div>
 <a href="/"><h1 style="color:rgb(64, 224, 85); margin-left:150px; margin-top:40px ; position:absolute; margin-top:100px;">  RETOUR à l'acceuil...<i class="fas fa-arrow-down"></i> </h1></a>
     <script src="javascript/javascriptCarrousel.js"></script>

@@ -11,7 +11,7 @@
 <body>
                
     <div class=" container">
-            <h1 style="color:rgb(64, 224, 85);margin-left:100px; margin-top:10px; position:absolute;"> Jeux Atari 2600 VCS <i class="far fa-caret-square-right"></i><i class="fas fa-video"></i> </h1>
+            <h1 style="color:rgb(64, 224, 85);margin-left:100px; margin-top:10px; position:absolute;"> Jeux {{this.console}} <i class="far fa-caret-square-right"></i><i class="fas fa-video"></i> </h1>
             <div id="app" data-page="0" class="tailleCarrousel">
 
                     <!--fleches gauche et droite du slider -->
@@ -30,9 +30,9 @@
                     <div class="row">
                             {{#each tableauSecondaire}}
                             <div class="image">
-                                        <h1 style="color:yellow">Jeux plateforme </h1>
+                                        <h1 style="color:yellow">Jeux {{this}} </h1>
                                     <div class="box" onclick="document.location='video/videoAtari/{{this}}'">
-                                        <img src="images/imagesAtari/{{this}}" >   
+                                        <img src="images/imagesAtari/{{this}}.jpg" >   
                                     </div>
                             </div>
                             {{/each}}   
@@ -42,7 +42,7 @@
         
     </div>
        <div class="container mt-4">
-                <a href="/carrousel_principal"><h1 style="color:rgb(64, 224, 85); margin-left:100px; margin-top:150px; position:absolute;">  RETOUR en arrière ...<i class="fas fa-arrow-down"></i> </h1></a>
+                <a href="/carrousel_principal?console={{this.console}}"><h1 style="color:rgb(64, 224, 85); margin-left:100px; margin-top:150px; position:absolute;">  RETOUR en arrière ...<i class="fas fa-arrow-down"></i> </h1></a>
        </div>
             <script src="javascript/javascriptCarrousel.js"></script>
             <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
