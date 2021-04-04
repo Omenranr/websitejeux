@@ -5,7 +5,9 @@ const { ensureAuthenticated } = require('../helpers/auth')
 
 //Chargement du model
 require('../models/Ideas')
+require('../models/Users')
 const Idea = mongoose.model('ideas')
+const User = mongoose.model('users')
 
 // ideas/add route du formulaire
 router.get('/add', ensureAuthenticated, (req, res) => {
@@ -53,22 +55,72 @@ router.post('/', ensureAuthenticated, (req, res) => {
 })
 
 router.get('/', ensureAuthenticated, (req, res) => {
-    Idea.find({ user: req.user.id})
-    .sort({date: 'desc'})
-    .then(ideas => {
-        res.render('ideas/index', {
-            ideas: ideas
-        })
+    User.findOne({_id: req.user.id})
+    .then(user => {
+        console.log(user)
+        if(user.type == "admin") {
+            Idea.find({visibility: "private"})
+            .sort({date: 'desc'})
+            .then(ideas => {
+                console.log(ideas)
+                for(let i = 0; i < ideas.length; i++) {
+                    ideas[i].publicButton = true
+                }
+                res.render("ideas/index", {
+                    ideas: ideas,
+                })
+            })
+        } else {
+            Idea.find({ user: req.user.id})
+            .sort({date: 'desc'})
+            .then(ideas => {
+                for(let i = 0; i < ideas.length; i++) {
+                    ideas[i].publicButton = false
+                }
+                res.render('ideas/index', {
+                    ideas: ideas,
+                })
+            })
+        }
     })        
 })
 
+router.get('/public', (req, res) => {
+    Idea.find({visibility: "public"})
+    .sort({date: 'desc'})
+    .then(ideas => {
+        console.log(ideas)
+        res.render("ideas/public", {
+            ideas: ideas,
+            message: "Les articles publiques",
+        })
+    })     
+})
+
+//Editer Idea formulaire
+router.get('/make_public/:id', ensureAuthenticated, (req, res) => {
+    Idea.findOne({
+        _id: req.params.id
+    })
+    .then(idea => {
+        if(idea.user != req.user.id && req.user.type != "admin") {
+           req.flash('error_msg', 'Non Authorisé')
+           res.redirect('/ideas')
+        } else {
+            idea.visibility = "public"
+            idea.save()
+            res.redirect('/ideas')
+        }
+        
+    })
+});
 //Editer Idea formulaire
 router.get('/edit/:id', ensureAuthenticated, (req, res) => {
     Idea.findOne({
         _id: req.params.id
     })
     .then(idea => {
-        if(idea.user != req.user.id){
+        if(idea.user != req.user.id && req.user.type != "admin"){
            req.flash('error_msg', 'Non Authorisé')
            res.redirect('/ideas')
         } else {

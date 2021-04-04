@@ -21,7 +21,7 @@ const IdeaSchema = mongoose.Schema({
     },
     visibility: {
         type: String,
-        default: 'pending',
+        default: 'private',
     }
 });
 
