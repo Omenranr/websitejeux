@@ -62,16 +62,7 @@
 
     
     
-                    {{!-- <h6 class="card-subtitle mb-2 text-muted"></h6> --}}   
-               <form method="POST" action="/ideas/{{id}}?_method=DELETE">
-                <a href="/ideas/edit/{{id}}" class="btn btn-secondary  btn-sm " >Editez</a>
-                    <input type="hidden" name="_method" value="DELETE">
-                    <input type="submit" class="btn btn-danger btn-sm" value="supprimez">
-                    {{#if publicButton}}
-                    <a type="button" class="btn btn-secondary btn-sm" href="/ideas/make_public/{{id}}">Publier</a>
-                    {{/if}}
-               </form>
-               {{this.userType}}
+                    {{!-- <h6 class="card-subtitle mb-2 text-muted"></h6> --}}
           </div>
      </div>
 
