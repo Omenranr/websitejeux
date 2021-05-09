@@ -147,12 +147,12 @@ app.get('/histoireDesJeuxVideo', (req, res) => {
 
 //Explosion du retro gaming route
 app.get('/explosionDuRetroGaming', (req, res)=> {
-    res.render('explosionDuRetroGaming');
+    res.render('explosionDuRetroGaming')
 });
 
 //Utilisation des routes
-app.use('/ideas', ideas);
-app.use('/users', users);
+app.use('/ideas', ideas)
+app.use('/users', users)
 app.use('/news', news)
 
 app.listen(port, () => {
